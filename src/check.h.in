@@ -1886,7 +1886,7 @@ enum ck_result_ctx
  *
  * @since 0.6.0
  */
-CK_DLL_EXP int CK_EXPORT tr_rtype(TestResult * tr);
+CK_DLL_EXP enum test_result CK_EXPORT tr_rtype(TestResult * tr);
 
 /**
  * Retrieve context in which the result occurred for the given test result.

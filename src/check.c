@@ -559,7 +559,7 @@ const char *tr_lfile(TestResult * tr)
     return tr->file;
 }
 
-int tr_rtype(TestResult * tr)
+enum test_result tr_rtype(TestResult * tr)
 {
     return tr->rtype;
 }
