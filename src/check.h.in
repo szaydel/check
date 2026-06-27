@@ -296,14 +296,14 @@ CK_DLL_EXP void CK_EXPORT tcase_set_tags(TCase * tc,
 /**
  * Add a looping test function to a test case
  *
- * The test will be called in a for(i = s; i < e; i++) loop with each
- * iteration being executed in a new context. The loop variable 'i' is
+ * The test will be called in a for(_i = s; _i < e; _i++) loop with each
+ * iteration being executed in a new context. The loop variable '_i' is
  * available in the test.
  *
  * @param tc test case to add test to
  * @param tf function to add to test case
- * @param s starting index for value "i" in test
- * @param e ending index for value "i" in test
+ * @param s starting index for value "_i" in test
+ * @param e ending index for value "_i" in test
  *
  * @since 0.9.4
  */
@@ -313,8 +313,8 @@ CK_DLL_EXP void CK_EXPORT tcase_set_tags(TCase * tc,
 /**
  * Add a looping test function with signal handling to a test case
  *
- * The test will be called in a for(i = s; i < e; i++) loop with each
- * iteration being executed in a new context. The loop variable 'i' is
+ * The test will be called in a for(_i = s; _i < e; _i++) loop with each
+ * iteration being executed in a new context. The loop variable '_i' is
  * available in the test.
  *
  * The added test is expected to terminate by throwing the given signal
@@ -323,8 +323,8 @@ CK_DLL_EXP void CK_EXPORT tcase_set_tags(TCase * tc,
  * @param tf function to add to test case
  * @param signal expected signal for test function to throw in order for
  *                the test to be considered passing
- * @param s starting index for value "i" in test
- * @param e ending index for value "i" in test
+ * @param s starting index for value "_i" in test
+ * @param e ending index for value "_i" in test
  *
  * @since 0.9.5
  */
@@ -334,8 +334,8 @@ CK_DLL_EXP void CK_EXPORT tcase_set_tags(TCase * tc,
 /**
  * Add a looping test function with an expected exit value to a test case
  *
- * The test will be called in a for(i = s; i < e; i++) loop with each
- * iteration being executed in a new context. The loop variable 'i' is
+ * The test will be called in a for(_i = s; _i < e; _i++) loop with each
+ * iteration being executed in a new context. The loop variable '_i' is
  * available in the test.
  *
  * The added test is expected to terminate by exiting with the given value
@@ -344,8 +344,8 @@ CK_DLL_EXP void CK_EXPORT tcase_set_tags(TCase * tc,
  * @param tf function to add to test case
  * @param expected_exit_value exit value for test function to return in
  *                             order for the test to be considered passing
- * @param s starting index for value "i" in test
- * @param e ending index for value "i" in test
+ * @param s starting index for value "_i" in test
+ * @param e ending index for value "_i" in test
  *
  * @since 0.9.7
  */
