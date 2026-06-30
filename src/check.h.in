@@ -1903,7 +1903,7 @@ CK_DLL_EXP enum test_result CK_EXPORT tr_rtype(TestResult * tr);
 CK_DLL_EXP enum ck_result_ctx CK_EXPORT tr_ctx(TestResult * tr);
 
 /**
- * Retrieve failure message from test result, if applicable.
+ * Retrieve the message from a test result.
  *
  * @return pointer to a message, if one exists. NULL otherwise.
  *
@@ -1912,43 +1912,41 @@ CK_DLL_EXP enum ck_result_ctx CK_EXPORT tr_ctx(TestResult * tr);
 CK_DLL_EXP const char *CK_EXPORT tr_msg(TestResult * tr);
 
 /**
- * Retrieve line number at which a failure occurred, if applicable.
+ * Retrieve a line number from a test result.
  *
- * @return If the test resulted in a failure, returns the line number
- *          that the failure occurred on; otherwise returns -1.
+ * @return If a test resulted in a failure, returns the line number
+ *        that the failure occurred on. Otherwise returns the line
+ *        number of the last assertion in the test.
  *
  * @since 0.6.0
  */
 CK_DLL_EXP int CK_EXPORT tr_lno(TestResult * tr);
 
 /**
- * Retrieve file name at which a failure occurred, if applicable.
+ * Retrieve test file name from a TestResult.
  *
- * @return If the test resulted in a failure, returns a string
- *          containing the name of the file where the failure
- *          occurred; otherwise returns NULL.
+ * @return A string containing the name of the file containing the
+ *         test associated with the result.
  *
  * @since 0.6.0
  */
 CK_DLL_EXP const char *CK_EXPORT tr_lfile(TestResult * tr);
 
 /**
- * Retrieve test case name in which a failure occurred, if applicable.
+ * Retrieve test case name from a TestResult.
  *
- * @return If the test resulted in a failure, returns a string
- *          containing the name of the test suite where the failure
- *          occurred; otherwise returns NULL.
+ * @return A string containing the name of the test case associated
+ *         with the result.
  *
  * @since 0.6.0
  */
 CK_DLL_EXP const char *CK_EXPORT tr_tcname(TestResult * tr);
 
 /**
- * Retrieve test name in which a failure occurred, if applicable.
+ * Retrieve test name from a TestResult.
  *
- * @return If the test resulted in a failure, returns a string
- *          containing the name of the test where the failure
- *          occurred; otherwise returns NULL.
+ * @return A string containing the name of the test associated with
+ *         the result.
  *
  * @since 0.15.3
  */
@@ -1962,7 +1960,7 @@ CK_DLL_EXP const char *CK_EXPORT tr_tname(TestResult * tr);
  * run with srunner_run_all(). Once finished, the suite runner
  * must be freed with srunner_free().
  *
- * @param s suite to generate a suite runner for
+ * @param s suite to generate a suite runner for, NULL if none
  *
  * @return suite runner for the given suite
  *
