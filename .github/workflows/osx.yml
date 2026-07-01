@@ -17,7 +17,7 @@ jobs:
     - name: install maxtex
       run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
     - name: install libtool
@@ -45,7 +45,7 @@ jobs:
     - name: install maxtex
       run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
     - name: install libtool
@@ -117,7 +117,7 @@ jobs:
     - name: install maxtex
       run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
     - name: install libtool
