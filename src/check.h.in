@@ -1960,7 +1960,8 @@ CK_DLL_EXP const char *CK_EXPORT tr_tname(TestResult * tr);
  * run with srunner_run_all(). Once finished, the suite runner
  * must be freed with srunner_free().
  *
- * @param s suite to generate a suite runner for, NULL if none
+ * @param s suite to generate a suite runner for, NULL to create
+ *          an empty suite runner
  *
  * @return suite runner for the given suite
  *
