@@ -10,7 +10,7 @@ jobs:
   build_osx_autotools_default_args:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
@@ -36,7 +36,7 @@ jobs:
   build_osx_autotools_other_args:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
@@ -62,7 +62,7 @@ jobs:
   build_osx_autotools_gcc:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
@@ -82,7 +82,7 @@ jobs:
   build_osx_autotools_clang:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
@@ -102,7 +102,7 @@ jobs:
   build_osx_autotools_example:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
@@ -138,7 +138,7 @@ jobs:
   build_osx_cmake:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: cmake cversion
       run: cmake --version
     - name: create configs
