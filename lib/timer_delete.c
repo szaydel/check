@@ -57,5 +57,6 @@ int timer_delete(timer_t timerid CK_ATTRIBUTE_UNUSED)
    * There is no support for alternative timers, so there is nothing
    * to delete or reset.
   */
+  return 0;
 #endif
 }
