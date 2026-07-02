@@ -10,7 +10,7 @@ jobs:
   build_linux_autotools_default_args:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y texlive texinfo texi2html doxygen
     - name: create configure
@@ -27,7 +27,7 @@ jobs:
   build_linux_autotools_other_args:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y texlive texinfo texi2html doxygen
     - name: create configure
@@ -44,7 +44,7 @@ jobs:
   build_linux_autotools_gcc:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: create configure 
       run: autoreconf -i
     - name: configure gcc
@@ -57,7 +57,7 @@ jobs:
   build_linux_autotools_clang:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: create configure
       run: autoreconf -i
     - name: configure clang
@@ -68,7 +68,7 @@ jobs:
   build_linux_autotools_crosscompile_mingw32:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y gcc-mingw-w64
     - name: create configure
@@ -82,7 +82,7 @@ jobs:
   build_linux_autotools_prereleasecheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y texlive texinfo texi2html doxygen
     - name: create configure
@@ -95,7 +95,7 @@ jobs:
   build_linux_autotools_docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y texlive texinfo texi2html doxygen
     - name: create configure
@@ -110,7 +110,7 @@ jobs:
   build_linux_autotools_example:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install doc packages
       run: sudo apt-get install -y texlive texinfo texi2html doxygen
     - name: create configure
@@ -137,7 +137,7 @@ jobs:
   build_linux_cmake:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: cmake cversion
       run: cmake --version
     - name: create configs
@@ -152,7 +152,7 @@ jobs:
   build_linux_scanbuild:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Install scan-build packages
       run: sudo apt-get install -y clang-tools
     - name: create configure
@@ -172,7 +172,7 @@ jobs:
   build_linux_cmake_project_usage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
       - name: run test
         run: |
           cmake --version || exit 1

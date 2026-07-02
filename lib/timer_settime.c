@@ -61,5 +61,6 @@ int timer_settime(timer_t timerid CK_ATTRIBUTE_UNUSED,
   /*
    * There is no support for timers on the platform.
    */
+  return 0;
 #endif
 }

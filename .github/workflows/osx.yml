@@ -10,16 +10,16 @@ jobs:
   build_osx_autotools_default_args:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
-    - name: install maxtex
-      run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texlive texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
+    - name: install libtool
+      run: brew install libtool
     - name: install pkg-config
       run: brew install pkgconfig
     - name: create configure
@@ -36,16 +36,16 @@ jobs:
   build_osx_autotools_other_args:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
-    - name: install maxtex
-      run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texlive texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
+    - name: install libtool
+      run: brew install libtool
     - name: install pkg-config
       run: brew install pkgconfig
     - name: create configure
@@ -62,12 +62,14 @@ jobs:
   build_osx_autotools_gcc:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
     - name: install automake
       run: brew install automake
+    - name: install libtool
+      run: brew install libtool
     - name: install pkg-config
       run: brew install pkgconfig
     - name: create configure 
@@ -82,12 +84,14 @@ jobs:
   build_osx_autotools_clang:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
     - name: install automake
       run: brew install automake
+    - name: install libtool
+      run: brew install libtool
     - name: install pkg-config
       run: brew install pkgconfig
     - name: create configure
@@ -102,16 +106,16 @@ jobs:
   build_osx_autotools_example:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     # Brew may not have permission to install its packages
     - name: change brew install folder permissions
       run: sudo chmod -R a+rwx /usr/local/share/ || mkdir -p /usr/local/share/ -m a+rwx
-    - name: install maxtex
-      run: brew install --cask mactex
     - name: install doc programs
-      run: brew install texi2html doxygen
+      run: brew install texlive texi2html doxygen texinfo
     - name: install automake
       run: brew install automake
+    - name: install libtool
+      run: brew install libtool
     - name: install pkg-config
       run: brew install pkgconfig
     - name: create configure
@@ -138,7 +142,7 @@ jobs:
   build_osx_cmake:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: cmake cversion
       run: cmake --version
     - name: create configs
